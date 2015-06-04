@@ -1,3 +1,4 @@
 # OpenOPC for Python
 
-For documentation and binary downloads please visit http://openopc.sourceforge.net/
+For project description, tutorials, and binary downloads please visit the main OpenOPC web site at:<br>
+http://openopc.sourceforge.net/
