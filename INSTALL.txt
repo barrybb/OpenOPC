@@ -1,0 +1,45 @@
+Steps to manually install the OpenOPC Gateway Service
+-----------------------------------------------------
+
+1. Create a new folder of C:\OpenOPC
+
+2. Copy the following files into this new folder:
+
+OpenOPCService.exe
+gbda_aut.dll
+
+3. Open a command prompt and type:
+
+cd \OpenOPC
+regsvr32 gbda_aut.dll
+OpenOPCService.exe install
+
+4. Go into the Control Panel and start the OpenOPC Gateway Service
+
+
+
+Steps to manually remove the OpenOPC Gateway Service
+----------------------------------------------------
+
+1. Go into the Control Panel and stop the OpenOPC Gateway Service
+
+2. Open a command prompt and type:
+
+cd \OpenOPC
+OpenOPCService.exe remove
+regsvr32 /u gbda_aut.dll
+
+3. Delete the entire C:\OpenOPC folder
+
+
+
+Non-Windows Systems
+-------------------
+If you wish to use OpenOPC with Linux, Mac, or other non-Windows OS,
+copy all the *.py files inside the src folder onto your non-Windows
+system.   Then read the Developers section in the README.txt file to
+ensure you have the necessary prerequisite Python modules installed.
+
+You can then use OpenOPC to talk to the Gateway Service that you
+installed above on one of your Windows boxes.  I recommend you install
+the Gateway Service on the same box where your OPC server resides.
